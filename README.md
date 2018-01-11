@@ -1,0 +1,2 @@
+# IDcard_OCR_FirstVersion
+身份证号码识别的第一个版本，目前只能识别规整的图片。后续的版本会做keras和GUI交互界面
