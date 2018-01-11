@@ -1,2 +1,0 @@
-# IDCARD_OCR
-# IDCARD_OCR

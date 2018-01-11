@@ -118,6 +118,7 @@ class OcrOfIdCard(object):
         """
         self.save_png()
         self.id_number = pytesseract.image_to_string(Image.open(self.file_name))
+        print(self.id_number)
         return self.id_number
 
 
