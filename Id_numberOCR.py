@@ -125,7 +125,7 @@ if __name__ == '__main__':
 
     time_start = time.time()
     idcard = OcrOfIdCard()
-    thresh_image = idcard.binary('1.jpeg', threshold=100)
+    thresh_image = idcard.binary('1.jpg', threshold=100)
     dilate_image = idcard.image_dilate(14)
     ROI = idcard.extract_region()
     ROI_image = idcard.draw_rectangle()
