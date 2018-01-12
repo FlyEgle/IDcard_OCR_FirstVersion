@@ -20,7 +20,7 @@ class OcrOfIdCard(object):
         self.grayimage = None
         self.contours = None
         self.key_cont = None
-        self.file_name = 'id_num.png'
+        self.file_name = 'image/id_num.png'
         self.id_number = None
 
     def binary(self, original_image, threshold=100):
@@ -126,16 +126,16 @@ if __name__ == '__main__':
 
     time_start = time.time()
     idcard = OcrOfIdCard()
-    thresh_image = idcard.binary('1.jpg', threshold=100)
+    thresh_image = idcard.binary('image/3.jpg', threshold=100)
     dilate_image = idcard.image_dilate(14)
     ROI = idcard.extract_region()
     ROI_image = idcard.draw_rectangle()
     crop_image = idcard.crop_roi()
     code = idcard.ocr_recogniation()
     time_end = time.time()
-    print ('The total time is :{}'.format(time_end - time_start), 's')
-    print (code)
-
+    # print ('The total time is :{}'.format(time_end - time_start), 's')
+    # print (code)
+    #
     plt.subplot(221), plt.imshow(thresh_image, cmap='gray')
     plt.subplot(222), plt.imshow(dilate_image)
     plt.subplot(223), plt.imshow(ROI_image)
